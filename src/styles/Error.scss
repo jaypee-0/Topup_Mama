@@ -1,0 +1,30 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Joan&family=Lato&family=Tiro+Devanagari+Sanskrit&display=swap');
+@import './variables.scss';
+
+#Error {
+    height: 100vh;
+    h2 {
+        font-size: 64px;
+        font-family: 'Tiro Devanagari Sanskrit', serif;
+        font-weight: 700;
+    }
+    h5 {
+        font-size: 32px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: $gray-500;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    button {
+        background-color: #ea2828;
+        border: 0;
+        color: white;
+        &:hover{
+            background-color: rgb(168, 55, 55);
+            color: rgb(219, 218, 218);
+        }
+    }
+}

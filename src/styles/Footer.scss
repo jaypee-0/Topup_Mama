@@ -1,0 +1,30 @@
+footer {
+	input {
+		&:focus {
+			border: 0;
+			outline: none;
+		}
+	}
+	.social_icons {
+		a {
+			.fa {
+				background-color: black;
+				color: white;
+				&:hover {
+					color: rgb(67, 55, 42);
+					background-color: gray;
+				}
+			}
+		}
+	}
+    .footer_bottom{
+        a {
+            color: rgb(49, 35, 35);
+            &:hover {
+                color: gray;
+            }
+        }
+        display: flex;
+        justify-content: center;
+    }
+}
