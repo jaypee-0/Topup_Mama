@@ -10,27 +10,29 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Error from "./components/Error";
 import PrivateRoute from "./utils/PrivateRoute";
 import Account from "./pages/Account";
+import { Signup } from "./pages/Signup";
 
 function App() {
 	interface Auth {
 		user: boolean | object;
 	}
 
-	const  user : Auth = React.useContext(Authcontext);
+	const user: Auth = React.useContext(Authcontext);
 
 	return (
 		<Router>
-			<Nav />
+			{user && <Nav />}
 			<Routes>
-				{user === null && <Route path={"/"} element={<Login />} />}
+				{!user && <Route path={"/login"} element={<Login />} />}
+				{!user && <Route path={"/register"} element={<Signup />} />}
 				<Route element={<PrivateRoute />}>
-					{user !== null && <Route path={"/"} element={<Home />} />}
+					{user && <Route path={"/"} element={<Home />} />}
 					<Route path="/account" element={<Account />} />
 					<Route path="/users" element={<Users />} />
 				</Route>
 				<Route path="*" element={<Error />} />
 			</Routes>
-			{user !== null && <Footer />}
+			{user && <Footer />}
 		</Router>
 	);
 }

@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     font-size: 1rem;
-    position: fixed;
+    position: static;
     top: 0;
     padding-bottom: 3rem;
     z-index: 999;
@@ -57,18 +57,15 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0rem;
+    margin: 0 0.5rem;
     height: 100%;
-    span {
-      cursor: pointer;
-    }
   }
   .nav-links:hover {
     color: white;
     background-color: black;
-    transition: all 0.2s ease-out;
+    transition: all 0.2s ease-in;
     text-shadow: black;
-    border-top: 2px solid red;
     cursor: pointer;
   }
   .fa-bars,
@@ -124,9 +121,9 @@
       padding: 1rem 2rem;
       width: 100%;
       display: table;
-    }
-    .nav-links:hover {
-      background-color: rgba(255, 255, 255, 0.31);
+      &:hover{
+        background-color: inherit;
+      }
     }
     .navbar-logo {
       position: absolute;

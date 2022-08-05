@@ -11,14 +11,6 @@
     <a href="https://{your-demo-link.your-domain}">
       Demo
     </a>
-    <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
-      Solution
-    </a>
-    <span> | </span>
-    <a href="https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv">
-      Challenge
-    </a>
   </h3>
 </div>
 
@@ -47,17 +39,12 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 - Your wisdom? :)
 
 ### Built With
-
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [SCSS](https://sass-lang.com/)
 
 ## Features
-
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
-
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv) was to build an application to complete the given user stories.
 
 ## How To Use

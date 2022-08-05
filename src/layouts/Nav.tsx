@@ -1,13 +1,15 @@
-import React from 'react';
+import '../styles/Nav.scss'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon as FA } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+import { Authcontext } from '../context/Authcontext';
+import React from 'react';
 import picture from '../assets/logo/logo.jpg';
-import '../styles/Nav.scss'
 
 export function Nav() {
-  const [click, setClick] = React.useState(false);
-  const [switchnav, setswitchnav] = React.useState(false);
+  let user, handleLogout = React.useContext(Authcontext)
+  const [click, setClick] = React.useState<boolean>(false);
+  const [switchnav, setswitchnav] = React.useState<boolean>(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -44,28 +46,34 @@ export function Nav() {
           </div>
           <ul id='ul' className={click ? 'nav-menu active' : 'nav-menu ms--md-auto'}>
             <li className='nav-item'>
-              <Link to='/'>
+              <Link to={'/'} className='nav-links'>
                 <span className='nav-links' onClick={closeMobileMenu}>
-                  {' '}
                   Home
                 </span>
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/account'>
+              <Link to={'/account'} className='nav-links'>
                 <span className='nav-links' onClick={closeMobileMenu}>
                   Account
                 </span>
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/users' className='nav-links'>
+              <Link to={'/users'} className='nav-links'>
                 <span className='nav-links' onClick={closeMobileMenu}>
                   Users
                 </span>
               </Link>
             </li>
           </ul>
+          <span className='me-3'>
+
+          {user ? <span onClick={()=> handleLogout}>Logout</span>
+          :
+          <span>Login</span>
+        }
+        </span>
         </div>
       </nav>
     </div>
